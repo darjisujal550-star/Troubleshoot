@@ -873,18 +873,10 @@ def logout(role):
 def too_large(error):
     return "Upload is too large. Maximum total upload size is 50 MB.", 413
 
+init_db()
+
 if __name__ == "__main__":
-    init_db()
     print("====================================")
     print("       GUNI TROUBLE-SHOOTER")
     print("====================================")
-    print("Student:  http://127.0.0.1:5000")
-    print("Mentor:   http://127.0.0.1:5000/mentor/login")
-    print("HOD:      http://127.0.0.1:5000/hod/login")
-    print("Principal: http://127.0.0.1:5000/principal/login")
-    print()
-    print("Mentor:    mentor / GUNI@123")
-    print("HOD:       hod / HOD@123")
-    print("Principal: principal / PRINCIPAL@123")
-    print("====================================")
-    app.run(debug=True,port=5000)
+    app.run(debug=True, port=5000)
