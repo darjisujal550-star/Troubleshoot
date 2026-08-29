@@ -8,8 +8,8 @@ from functools import wraps
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-DATABASE = "guni_troubleshooter.db"
-UPLOAD_FOLDER = "uploads"
+DATABASE = "/tmp/guni_troubleshooter.db"
+UPLOAD_FOLDER = "/tmp/uploads"
 app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024
 app.secret_key = "CHANGE_THIS_TO_A_LONG_RANDOM_SECRET_KEY"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
